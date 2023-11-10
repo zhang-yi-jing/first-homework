@@ -354,6 +354,7 @@
 -analyzer:"E:/unity2022.2.19f1c1/2022.2.19f1c1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/unity2022.2.19f1c1/2022.2.19f1c1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/script/CharacterMovement.cs"
+"Assets/script/PlayerStatusMonitor.cs"
 "Assets/script/SceneManager.cs"
 "Assets/script/SceneSwitchCounter.cs"
 "Assets/script/SoundManager.cs"

@@ -6,7 +6,6 @@ public class SoundManager : MonoBehaviour
     public AudioClip backgroundMusic; // 需要播放的背景音乐剪辑
     private AudioSource soundAudioSource;
     private AudioSource backgroundMusicAudioSource;
-    private bool isPlaying;
 
     private static SoundManager instance;
 
@@ -25,38 +24,17 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // 创建两个新的AudioSource组件
+        // 创建两个新的 AudioSource 组件
         soundAudioSource = gameObject.AddComponent<AudioSource>();
         backgroundMusicAudioSource = gameObject.AddComponent<AudioSource>();
 
-        // 设置背景音乐的AudioSource组件
+        // 设置背景音乐的 AudioSource 组件
         backgroundMusicAudioSource.clip = backgroundMusic;
         backgroundMusicAudioSource.loop = true;
         backgroundMusicAudioSource.Play();
     }
 
-    private void Update()
-    {
-        // 检测按下的键
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) ||
-            Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
-        {
-            if (!isPlaying)
-            {
-                PlaySound();
-                isPlaying = true;
-            }
-        }
-        // 检测松开的键
-        else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) ||
-                 Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
-        {
-            StopSound();
-            isPlaying = false;
-        }
-    }
-
-    private void PlaySound()
+    public void PlaySound()
     {
         // 播放声音剪辑，并设置循环播放
         soundAudioSource.clip = soundClip;
@@ -64,7 +42,7 @@ public class SoundManager : MonoBehaviour
         soundAudioSource.Play();
     }
 
-    private void StopSound()
+    public void StopSound()
     {
         // 停止播放声音剪辑
         soundAudioSource.Stop();
