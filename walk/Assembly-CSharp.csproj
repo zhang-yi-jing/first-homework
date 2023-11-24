@@ -59,7 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\SceneManager.cs" />
+    <Compile Include="Assets\script\UIManager.cs" />
+    <Compile Include="Assets\script\Pickupitem.cs" />
+    <Compile Include="Assets\script\GameManager.cs" />
+    <Compile Include="Assets\script\BackPack.cs" />
+    <Compile Include="Assets\script\BackPack1.cs" />
     <Compile Include="Assets\script\CharacterMovement.cs" />
+    <Compile Include="Assets\script\Item.cs" />
     <Compile Include="Assets\script\SceneSwitchCounter.cs" />
     <Compile Include="Assets\script\SoundManager.cs" />
     <Compile Include="Assets\script\PlayerStatusMonitor.cs" />
